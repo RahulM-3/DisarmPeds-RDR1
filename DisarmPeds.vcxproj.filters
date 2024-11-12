@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Headers\Enums.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InputsManager\InputsManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Math.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Natives.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\NativesCaller.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Includes\RedHook.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Structs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Application\Application.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Application\Application.cpp" />
+    <ClCompile Include="Source\InputsManager\InputsManager.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{9ebd1f8e-571a-4dc0-a46e-1a9076a6eb9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{db25e830-e86a-487a-a282-cbfeef55142a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
