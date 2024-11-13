@@ -686,8 +686,8 @@ static int UNK_0xD85CA776(int pram0) { return Invoke<0xD85CA776, int>(pram0); }
 static int GET_DRAFT_ACTOR(int pram0, int pram1) { return Invoke<0x48D5121D, int>(pram0, pram1); }
 static bool IS_ACTOR_DEAD(Actor actor) { return Invoke<0x0D798FFE, bool>(actor); }
 static int IS_OBJECT_IN_OBJECTSET(int pram0, int pram1) { return Invoke<0x0114FCBD, int>(pram0, pram1); }
-// static const char* GET_ACTOR_NAME(Actor _Actor) { return Invoke<0x78CF43C1, const char*>(_Actor); } // Exact same as 'GET_OBJECT_NAME', no need to use this native.
-// static const char* GET_LAYOUT_NAME(Layout _Layout) { return Invoke<0xBADE22A2, const char*>(_Layout); } // Exact same as 'GET_OBJECT_NAME', no need to use this native.
+static const char* GET_ACTOR_NAME(Actor _Actor) { return Invoke<0x78CF43C1, const char*>(_Actor); } // Exact same as 'GET_OBJECT_NAME', no need to use this native.
+static const char* GET_LAYOUT_NAME(Layout _Layout) { return Invoke<0xBADE22A2, const char*>(_Layout); } // Exact same as 'GET_OBJECT_NAME', no need to use this native.
 // static const char* GET_SOMETHING_NAME(int _Something) { return Invoke<0xF662EAE1, const char*>(_Something); } // Exact same as 'GET_OBJECT_NAME', no need to use this native.
 static const char* GET_OBJECT_NAME(Object _Object) { return Invoke<0xDF40614F, const char*>(_Object); }
 static const char* _GET_OBJECT_GXT_ENTRY(Object _Object) { return Invoke<0x5C4262F9, const char*>(_Object); }

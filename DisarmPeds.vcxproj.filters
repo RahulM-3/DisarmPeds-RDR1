@@ -41,6 +41,9 @@
     <ClCompile Include="pch.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="utils.h">
+      <Filter>include</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
@@ -49,5 +52,8 @@
     <Filter Include="main">
       <UniqueIdentifier>{db25e830-e86a-487a-a282-cbfeef55142a}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="temp" />
   </ItemGroup>
 </Project>
