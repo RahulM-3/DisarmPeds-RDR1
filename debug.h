@@ -1,4 +1,5 @@
 #include <pch.h>
+std::ofstream logfile("debug.log");
 
 // CALCULATE MEMORY USAGE
 char* getMemoryUsage() {
@@ -28,8 +29,6 @@ char* getMemoryUsage() {
     }
 }
 
-std::ofstream logfile("debug.log");
-
 // DISPLAY SYSTEM RESOURCE USAGE
 void MonitorResource()
 {
@@ -51,8 +50,21 @@ void MonitorResource()
     RH_DrawText(memoryusage, xmem, ymem, 1, scale, 255, 255, 255, 255, TextAlignment_Center);
 }
 
-void onScreenDebug(const char* text, float x, float y)
+// On screen Debug
+void onScreenDebug(std::vector<const char*> texts, float x, float y, float scale = 0.03f, int bgalpha = 150, int fgalpha = 300)
 {
-    RH_DrawRect(x, y, 0.5, 0.5, 0, 0, 0, 200);
-    RH_DrawText(text, x, y, 1, 0.03, 255, 255, 255, 255, TextAlignment_Center);
+    float width = 0.0f;
+    float height = 0.0f;
+    for (const char* text : texts)
+    {
+        height += scale;
+        width = max(width, RH_GetTextWidth(text, 1, scale));
+    }
+    
+    RH_DrawRect(x+(width/2), y+((height - scale)/2), width + scale, height + scale, 0, 0, 0, bgalpha);
+    for (const char* text : texts)
+    {
+        RH_DrawText(text, x, y, 1, scale, 255, 255, 255, fgalpha, TextAlignment_Left);
+        y += scale;
+    }
 }
