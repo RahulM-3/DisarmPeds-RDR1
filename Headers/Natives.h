@@ -24,6 +24,8 @@ using Hash = uint32_t;
 using Time = float;
 
 
+// fromweb
+static float GET_CAMERA_ASPECT_RATIO(Camera p0) { return Invoke<0xCE01609D, float>(p0); } // 0xCE01609D
 
 // static void WAIT(int ms) { Invoke<0x7715C03B, void>(ms); } // We don't want to use WAIT native but our own Wait function instead.
 static void WAIT(int ms) { ScriptWait(ms); }
